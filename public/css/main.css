@@ -1,21 +1,12 @@
-/*
- * This is a CSS file.
- * Inside of CSS files comments are started with /* and ended with:
- */
+.content_block {
+   width: 400px;
+  background-color: #00B88A;
+  margin: 50px;
+  padding: 15px;
+}
 
-/*
- * Starting with Wave 2 of this project we will be using CSS to style our
- * web pages. You should place all of your styles in this file and then
- * reference it from each of your HTML files.
- */
-
-/*
- * This file is located at "public/main.css" in your project directory.
- * Because it is in the "public" directory, Sinatra knows to make the file
- * accessible to your HTML files when you use the src="path/to/file"
- * attribute on the appropriate tags.
- *
- * For example, to include an image into your site, place the file in the
- * public directory and use <img src="/name_of_image.png"> in your HTML
- * file. The "public" part of the path should *not* be included.
- */
+nav {
+  font-family="sans-serif";
+  text-decoration: none;
+  text-align: center;
+}
