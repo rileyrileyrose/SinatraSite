@@ -17,5 +17,5 @@ class MySite < Sinatra::Base
   get "/index" do
   	erb :index
   end
-  
+
 end
