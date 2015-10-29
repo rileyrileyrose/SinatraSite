@@ -22,4 +22,9 @@ class MySite < Sinatra::Base
 		erb :blog
 	end
 
+	get "/taco_calc" do
+		@title = "Taco Calculator"
+		erb :taco_calc
+	end
+
 end

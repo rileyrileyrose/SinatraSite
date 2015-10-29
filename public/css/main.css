@@ -8,6 +8,8 @@ header {
 }
 
 div#wrap{
+  width: 900px
+  background-color: #FFEFAD;
   width:90%;
   margin: 0 auto;
 }
