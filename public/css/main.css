@@ -16,9 +16,14 @@ nav {
   text-align: center;
 }
 
+nav a{
+  margin: 0px 25px;
+}
+
 a {
   font-family: 'Amatic SC', courier;
   font-size: 40px;
+  text-decoration: none;
 }
 
 a:link {
@@ -38,11 +43,13 @@ a:active {
 }
 
 .content_block {
-  display: inline-block;
+  display: inline-block; 
+  height: 200px;
   width: 300px;
   background-color: #00B88A;
   margin: 1em;
-  padding: 2em;
+  padding: 30px;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 .header_block{
@@ -55,17 +62,42 @@ a:active {
 }
 
 .blog_header{
-  display: inline-block;
+  width: 25%;
   padding: 10px;
-  margin: 10px;
+  margin: 10 auto;
   background-color: #00EBB0;
   font-family: 'Amatic SC', sans-serif;
+  text-align: center;
 }
 
 article {
+  width: 75%;
   border: 2px black dashed;
+  margin: 10 auto;
+  padding: 10px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+aside {
+  background-color: #F4007A;
+  font-family: "Coming Soon", serif;
+  text-align: center;
+  margin: 10 auto;
+  padding: 15px;
+}
+
+table {
+  border: 1px solid black;
+}
+
+thead {
+  border: none;
+  border-bottom: 1px solid black;
 }
 
 footer {
+  text-align: center;
   background-color: #EAAAFF;
+  font-size: 40px;
+  font-family: 'Amatic SC', sans-serif;
 }
