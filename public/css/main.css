@@ -1,18 +1,17 @@
 body{
   width: 900px
   background-color: #FFEFAD;
+  margin: 0 auto;
 }
 
 header {
   background-color: #EAAAFF;  
 }
 
-div#wrap{
-  width: 900px
+div#wrap{s
   background-color: #FFEFAD;
   width:90%;
   margin: 0 auto;
-  display: inline;
 }
 
 nav {
@@ -47,10 +46,10 @@ a:active {
 
 .content_block {
   display: inline-block;
-  width: 200px;
-  height: 200px;
+  width: 25%;
+  height: 35%;
   background-color: #00CC99;
-  margin: 10 auto;
+  margin: 10px auto;
   padding: 30px;
   font-family: 'Coming Soon', sans-serif;
   text-align: center;
@@ -58,6 +57,7 @@ a:active {
 
 .creator_block { 
   background-color: #00CC99;
+  /*display: inline-block;*/
   width: 500px;
   margin: 10 auto;
   padding: 20px;
