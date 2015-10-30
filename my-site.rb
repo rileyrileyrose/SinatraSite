@@ -4,8 +4,8 @@ class Taco
 end
 
 class Unicorn
-	attr_reader :horn_size, :hunger
-	attr_accessor :name
+	attr_reader :horn_size
+	attr_accessor :name, :hunger
 
 	def initialize
 		@name = ""
@@ -23,7 +23,7 @@ class Unicorn
 	end
 
 	def give_name
-		names = ['Charlie', 'Pericles', 'Desmond', 'Scarlett', 'Janet', 'Gertrude', 'Apple', 'Onion', 'WaterfallRiverSparkle', 'Unitarded', 'Gregory']
+		names = ['Charlie', 'Pericles', 'Desmond', 'Scarlett', 'Janet', 'Gertrude', 'Apple', 'Onion', 'WaterfallRiverSparkle', 'Unitarded', 'Gregory', 'James', 'Bearasaurus', 'Desdemona', 'T-Rex']
 		length = names.length - 1
 		name = names[rand(0..length)]
 	end
@@ -68,6 +68,7 @@ class MySite < Sinatra::Base
 	end
 
 	post '/named_tacocorn' do
+		@title = "Your TacoCorn"
 		@uni = Unicorn.new
 	  @name =  params[:name]
 	  @uni.name = @name
@@ -75,5 +76,6 @@ class MySite < Sinatra::Base
 	  @tacocorn = random_tacocorn
 	  erb :named_tacocorn
 	end
+
 end
 
