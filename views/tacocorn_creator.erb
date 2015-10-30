@@ -1,5 +1,18 @@
 <div class='creator_block'>
-  <p><%= @intro = @uni %></p>
+  <p>
+    <%= @intro %>
+  </p>
   <img id=creator src="images/<%= @tacocorn %>">
-
+  <p>
+    <%= @uni.name %> is hungry! They need <%= @uni.hunger %> tacos to fill up their big maw.
+  </p>
+</div>
+<div class='creator_block'>
+  <h2> Name a TacoCorn! </h2>
+    <form action="/named_tacocorn" method="post">
+      Name:<br>
+      <input type="text" name="name">
+      <br><br>
+      <input type="submit" value="Submit">
+    </form>
 </div>
