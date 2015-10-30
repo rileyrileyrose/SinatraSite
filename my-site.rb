@@ -29,7 +29,7 @@ class Unicorn
 end
 
 def random_tacocorn
-	@taco_corns = ["hipster_tacocorn.png", "taco_unicorn.jpeg"]
+	@taco_corns = ["hipster_tacocorn.png", "taco_unicorn.jpeg", "hipster_tacocorn1.jpeg", "tacocorn1.jpeg", "brony.jpeg", "tacocorn2.jpeg", "tacocorn3.jpeg"]
 	length = @taco_corns.length - 1
 	return @taco_corns[rand(0..length)]
 end
