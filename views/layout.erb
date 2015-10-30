@@ -14,12 +14,18 @@
           <a href="/index">Home</a>
           <a href="/blog">Blog</a>
           <a href="/taco_corn">TacoCorns!</a>
+          <a href="/tacocorn_creator">TacoCorn Creator</a>
         </nav>
       </header> 
       <%= yield %>
     
       <footer>
-        Follow my <a href="blog">Blog</a>!
+        <div>
+          &copy; Riley Spicer <%= Time.now.year %>
+        </div>
+        <div>
+          Follow my <a href="blog">Blog</a>!
+        </div>
       </footer>
     </div>
   </body>

@@ -54,6 +54,14 @@ a:active {
   font-family: 'Roboto Condensed', sans-serif;
 }
 
+.creator_block { 
+  background-color: #00B88A;
+  width: 500px;
+  margin: 10 auto;
+  padding: 20px;
+  font-family: 'Coming Soon', sans-serif;
+}
+
 .header_block{
   display: inline-block;
   margin: 10px auto;
@@ -97,9 +105,18 @@ thead {
   border-bottom: 1px solid black;
 }
 
+img#creator {
+  width: 200px;  margin: 0 auto;
+}
+
 footer {
   text-align: center;
   background-color: #EAAAFF;
   font-size: 40px;
   font-family: 'Amatic SC', sans-serif;
+}
+
+footer div {
+  display: inline-block;
+  margin: 0px 15px;
 }
