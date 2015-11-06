@@ -41,8 +41,8 @@ class MySite < Sinatra::Base
 		@title = "Your TacoCorn"
 	  @name =  params[:name]
 	  @uni = Unicorn.new
-	  @uni.name = @name
-	  current_db.create_tacocorn(@name, @uni.horn_size, @uni.hunger, 'something')
+	  @name = @uni.name
+	  @hunger = @uni.hunger
 	  erb :named_tacocorn
 	end
 
