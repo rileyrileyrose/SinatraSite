@@ -1,12 +1,7 @@
 require "sinatra"
 require './lib/unicorn.rb'
-require './lib/database.rb'
 
 class MySite < Sinatra::Base
-
-	def current_db 
-		@curr_db ||= TacoCorn::Database.new("taco_corns.db")
-	end
 
 	get "/" do
 		@title = "One Taco to Rule Them All"
@@ -41,8 +36,7 @@ class MySite < Sinatra::Base
 		@title = "Your TacoCorn"
 	  @name =  params[:name]
 	  @uni = Unicorn.new
-	  @name = @uni.name
-	  @hunger = @uni.hunger
+	  @uni.name = @name
 	  erb :named_tacocorn
 	end
 
