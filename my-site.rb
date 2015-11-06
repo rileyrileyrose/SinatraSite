@@ -1,42 +1,12 @@
 require "sinatra"
-
-class Taco
-end
-
-class Unicorn
-	attr_reader :horn_size
-	attr_accessor :name, :hunger
-
-	def initialize
-		@name = ""
-		@horn_size = rand(2..10)
-		@hunger = @horn_size
-	end
-
-	def introduce
-		@intro = "Meet #{name}, the TacoCorn. \n#{name} loves to eat tacos."
-	end
-
-	def self.introduce_new
-		@@unicorn = Unicorn.new
-		return @@unicorn.introduce
-	end
-
-	def give_name
-		names = ['Charlie', 'Pericles', 'Desmond', 'Scarlett', 'Janet', 'Gertrude', 'Apple', 'Onion', 'WaterfallRiverSparkle', 'Unitarded', 'Gregory', 'James', 'Bearasaurus', 'Desdemona', 'T-Rex']
-		length = names.length - 1
-		name = names[rand(0..length)]
-	end
-end
-
-def random_tacocorn
-	@taco_corns = ["hipster_tacocorn.png", "taco_unicorn.jpeg", "hipster_tacocorn2.jpeg", "tacocorn1.jpeg", "brony.jpeg", "tacocorn2.jpeg", "tacocorn3.jpeg"]
-	length = @taco_corns.length - 1
-	return @taco_corns[rand(0..length)]
-end
-
+require './lib/unicorn.rb'
+require './lib/database.rb'
 
 class MySite < Sinatra::Base
+
+	def current_db 
+		@curr_db ||= TacoCorn::Database.new("taco_corns.db")
+	end
 
 	get "/" do
 		@title = "One Taco to Rule Them All"
@@ -69,11 +39,10 @@ class MySite < Sinatra::Base
 
 	post '/named_tacocorn' do
 		@title = "Your TacoCorn"
-		@uni = Unicorn.new
 	  @name =  params[:name]
+	  @uni = Unicorn.new
 	  @uni.name = @name
-	  @intro = @uni.introduce
-	  @tacocorn = random_tacocorn
+	  current_db.create_tacocorn(@name, @uni.horn_size, @uni.hunger, 'something')
 	  erb :named_tacocorn
 	end
 

@@ -12,11 +12,18 @@ module TacoCorn
         CREATE TABLE tacocorns (
           id INTEGER PRIMARY KEY,
           name TEXT NOT NULL,
-          description TEXT NULL, 
           hunger INTEGER NOT NULL,
           horn_size INTEGER NOT NULL
+          description TEXT NULL, 
         );')
     end
+
+    def create_tacocorn(name, horn_size, hunger, description)
+			@db.execute('
+				INSERT INTO tacocorns (name, horn_size, hunger, description)
+				VALUES(?, ?, ?, ?)
+				', name, horn_size, hunger, description)
+		end
   end
 
 end
