@@ -37,6 +37,7 @@ class MySite < Sinatra::Base
 	  @name =  params[:name]
 	  @uni = Unicorn.new
 	  @uni.name = @name
+	  @tacocorn = random_tacocorn
 	  erb :named_tacocorn
 	end
 
